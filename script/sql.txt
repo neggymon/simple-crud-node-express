@@ -1,0 +1,25 @@
+-- Create db first naming 'db_emp'
+-- Table structure for tbl_employees
+  CREATE TABLE IF NOT EXISTS tbl_employees (
+    id int(11) NOT NULL,
+	  empId varchar(150) NOT NULL,
+    name varchar(200) NOT NULL,
+    email varchar(200) NOT NULL,
+	  isActive BOOLEAN,
+    createdDate datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  ALTER TABLE tbl_employees ADD PRIMARY KEY (id);
+  ALTER TABLE tbl_employees MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+  
+  
+  
+  -- Insert employee
+  INSERT INTO tbl_employees (id, empId, name, email, isActive, createdDate) VALUES
+  (1, 001, 'Rommel Rullan', 'rrullan@test.ph', 1, '2022-02-08 13:20:20'),
+  (2, 002, 'Shy Molo', 'smolo@test.ph', 1, '2022-02-08 13:20:20'),
+  (3, 003, 'Test Person', 'tperson@test.ph', 1, '2022-02-08 13:20:20'),
+  (4, 004, 'Employee One', 'eone@test.ph', 1, '2022-02-08 13:20:20'),
+  (5, 005, 'Employee Two', 'etwo@test.ph', 1, '2022-02-08 13:20:20');
+  
+  
+  
